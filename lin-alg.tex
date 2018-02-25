@@ -1,0 +1,165 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{gensymb}
+\usepackage{mathrsfs}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{amsthm}
+\usepackage{multicol}
+
+\renewcommand{\vec}[1]{\textbf{#1}}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{corollary}{Corollary}[theorem]
+\newtheorem{lemma}[theorem]{Lemma}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}[section]
+
+\theoremstyle{remark}
+\newtheorem*{remark}{Remark}
+
+\theoremstyle{remark}
+\newtheorem*{recall}{Recall}
+
+\theoremstyle{remark}
+\newtheorem*{it follows}{It follows}
+
+\title{Multivariable Calculus}
+\author{Andres Duarte}
+\date{2018}
+
+\begin{document}
+
+\maketitle
+
+\tableofcontents
+
+\newpage
+
+\section{Linear Equations in Linear Algebra}
+\subsection{Systems of Linear Equations}
+
+\begin{definition}
+  A \textit{linear equation is an equation of the form}
+  $$a_1 x_1 + a_2 x_2 + \dots + a_n x_n = b$$
+\end{definition}
+
+\begin{definition}
+  A \textit{linear system} is a set of linear equations involving like variables.
+\end{definition}
+
+\begin{definition}
+  A \textit{solution} to a linear system is an ordered set that makes the linear system true.
+\end{definition}
+
+\begin{definition}
+  A \textit{solution set} is the set of all possible solutions to the linear system.
+\end{definition}
+
+\begin{remark}
+  Two linear systems with like solution sets are \textit{equivalent}.
+\end{remark}
+
+\begin{remark}
+  A linear system is \textit{consistent} if it has at least one solution, and \textit{inconsistent} if it has no solutions.
+\end{remark}
+
+\begin{definition}
+  A \textit{coefficient matrix} is a matrix that consists of the coefficients of the variables of a linear system.
+\end{definition}
+
+\begin{remark}
+  Each column of the coefficient matrix corresponds to a variable in the linear system.
+\end{remark}
+
+\begin{definition}
+  An \textit{augmented matrix} consists of the coefficient matrix with an added column containing the constants of the RHS of the linear system.
+\end{definition}
+
+\begin{definition}
+  An $m \times n$ \textit{matrix} is a rectangular array of elements with $m$ rows and $n$ columns.
+\end{definition}
+
+\subsubsection{Elementary Row Operations}
+
+\begin{itemize}
+  \item add the multiple of one row to another
+  \item switch two rows
+  \item scale a row by a nonzero constant
+\end{itemize}
+
+\begin{remark}
+  Row operations are reversible.
+\end{remark}
+
+\begin{remark}
+  Two matrices are \textit{row equivalent} if a sequence of row operations can transform one into the other.
+\end{remark}
+
+\begin{remark}
+  All row equivalent augmented matrices have the same solution set.
+\end{remark}
+
+\subsubsection{Questions}
+\begin{itemize}
+  \item does a solution to the linear system exist?
+  \item If it does, is it unique?
+\end{itemize}
+
+\subsection{Row Reduction and Echelon Forms}
+
+  \begin{definition}
+    The \textit{leading entry} of a row is its left-most non-zero entry.
+  \end{definition}
+
+  \begin{definition}
+    A matrix is in \textit{echelon form} if:
+    \begin{itemize}
+      \item all non-zero rows are above any all-zero rows
+      \item the leading entry of each row is in a column to the right of the leading entry of the row above it
+      \item all entries in a column below a leading entry are zeros
+    \end{itemize}
+  \end{definition}
+
+  \begin{definition}
+    A matrix is in \textit{reduced row echelon form} if:
+    \begin{itemize}
+      \item it's in echelon form
+      \item all leading entries are 1
+      \item all leading entries are the only non-zero entries in their columns
+    \end{itemize}
+  \end{definition}
+
+  \begin{remark}
+    A matrix can have many echelon forms but only one reduced echelon form.
+  \end{remark}
+
+  \begin{definition}
+    A \textit{pivot position} corresponds to the position of one of the leading entries of the echelon form of a matrix.
+  \end{definition}
+
+  \begin{definition}
+    A column of the coefficient matrix is a \textit{free column} if it doesn't contain a pivot position.
+  \end{definition}
+
+  \begin{definition}
+    A column of the augmneted matrix is a \textit{pivot column} if it contains a pivot position.
+  \end{definition}
+
+  \begin{remark}
+    Variables corresponding to free columns are called \textit{free variables}. Variables corresponding to pivot columns are called \textit{basic variables}.
+  \end{remark}
+
+  \begin{remark}
+    The solution set of a consistent linear system has a \textit{parametric representation}, where by convention free variables act as parameters. The solution set of an incosistent linear system is empty and has *no* parametric representation.
+  \end{remark}
+
+  \begin{remark}
+    A linear system is consistent iff the right-most column of the augmented matrix is \textbf{not} a pivot column.
+  \end{remark}
+
+
+
+\end{document}
