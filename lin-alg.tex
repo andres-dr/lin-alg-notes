@@ -94,15 +94,16 @@
   Row operations are reversible.
 \end{remark}
 
-\begin{remark}
+\begin{definition}
   Two matrices are \textit{row equivalent} if a sequence of row operations can transform one into the other.
-\end{remark}
+\end{definition}
 
 \begin{remark}
   All row equivalent augmented matrices have the same solution set.
 \end{remark}
 
 \subsubsection{Questions}
+
 \begin{itemize}
   \item does a solution to the linear system exist?
   \item If it does, is it unique?
@@ -110,55 +111,67 @@
 
 \subsection{Row Reduction and Echelon Forms}
 
-  \begin{definition}
-    The \textit{leading entry} of a row is its left-most non-zero entry.
-  \end{definition}
+\begin{definition}
+  The \textit{leading entry} of a row is its left-most non-zero entry.
+\end{definition}
 
-  \begin{definition}
-    A matrix is in \textit{echelon form} if:
-    \begin{itemize}
-      \item all non-zero rows are above any all-zero rows
-      \item the leading entry of each row is in a column to the right of the leading entry of the row above it
-      \item all entries in a column below a leading entry are zeros
-    \end{itemize}
-  \end{definition}
+\begin{definition}
+  A matrix is in \textit{echelon form} if:
+  \begin{itemize}
+    \item all non-zero rows are above any all-zero rows
+    \item the leading entry of each row is in a column to the right of the leading entry of the row above it
+    \item all entries in a column below a leading entry are zeros
+  \end{itemize}
+\end{definition}
 
-  \begin{definition}
-    A matrix is in \textit{reduced row echelon form} if:
-    \begin{itemize}
-      \item it's in echelon form
-      \item all leading entries are 1
-      \item all leading entries are the only non-zero entries in their columns
-    \end{itemize}
-  \end{definition}
+\begin{definition}
+  A matrix is in \textit{reduced row echelon form} if:
+  \begin{itemize}
+    \item it's in echelon form
+    \item all leading entries are 1
+    \item all leading entries are the only non-zero entries in their columns
+  \end{itemize}
+\end{definition}
 
-  \begin{remark}
-    A matrix can have many echelon forms but only one reduced echelon form.
-  \end{remark}
+\begin{remark}
+  A matrix can be row equivalent with many echelon forms but only one reduced echelon form.
+\end{remark}
 
-  \begin{definition}
-    A \textit{pivot position} corresponds to the position of one of the leading entries of the echelon form of a matrix.
-  \end{definition}
+\begin{definition}
+  A \textit{pivot position} corresponds to the position of one of the leading entries of the reduced echelon form of a matrix.
+\end{definition}
 
-  \begin{definition}
-    A column of the coefficient matrix is a \textit{free column} if it doesn't contain a pivot position.
-  \end{definition}
+\begin{definition}
+  A column of the coefficient matrix is a \textit{free column} if it doesn't contain a pivot position.
+\end{definition}
 
-  \begin{definition}
-    A column of the augmneted matrix is a \textit{pivot column} if it contains a pivot position.
-  \end{definition}
+\begin{definition}
+  A column of the augmented matrix is a \textit{pivot column} if it contains a pivot position.
+\end{definition}
 
-  \begin{remark}
-    Variables corresponding to free columns are called \textit{free variables}. Variables corresponding to pivot columns are called \textit{basic variables}.
-  \end{remark}
+\begin{remark}
+  Variables corresponding to free columns are \textit{free variables}. Variables corresponding to pivot columns are \textit{basic variables}.
+\end{remark}
 
-  \begin{remark}
-    The solution set of a consistent linear system has a \textit{parametric representation}, where by convention free variables act as parameters. The solution set of an incosistent linear system is empty and has *no* parametric representation.
-  \end{remark}
+\begin{remark}
+  The solution set of a consistent linear system has a \textit{parametric representation} in which by convention free variables act as parameters. The solution set of an incosistent linear system is empty and has \textbf{no} parametric representation.
+\end{remark}
 
-  \begin{remark}
-    A linear system is consistent iff the right-most column of the augmented matrix is \textbf{not} a pivot column.
-  \end{remark}
+\begin{remark}
+  Solving a system amounts to finding a parametric representation of the solution set or determing that the solution set is empty.
+\end{remark}
+
+\begin{remark}
+  A linear system is consistent iff the right-most column of the augmented matrix is \textbf{not} a pivot column.
+\end{remark}
+
+\begin{remark}
+  A consistent linear system has either a unique solution, if it has no free variables, or infinitely many solutions if it has at least one free variable.
+\end{remark}
+
+\subsection{Vector Equations}
+
+
 
 
 
