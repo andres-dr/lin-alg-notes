@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1519621373 "lin-alg.tex" "lin-alg.pdf" "lin-alg" 1519621374
+["pdflatex"] 1519626011 "lin-alg.tex" "lin-alg.pdf" "lin-alg" 1519626012
   "/usr/local/texlive/2017/texmf-dist/fonts/enc/dvips/cm-super/cm-super-ts1.enc" 1480098666 2900 1537cc8184ad1792082cd229ecc269f4 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/map/fontname/texfonts.map" 1480098670 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/local/texlive/2017/texmf-dist/fonts/tfm/jknappen/ec/tcrm0500.tfm" 1480098696 1536 b3387106d9afecbfe14bde2de6eadf47 ""
@@ -87,11 +87,11 @@
   "/usr/local/texlive/2017/texmf-var/fonts/map/pdftex/updmap/pdftex.map" 1495593472 2350277 a699055bee05bf8a40b0504752487295 ""
   "/usr/local/texlive/2017/texmf-var/web2c/pdftex/pdflatex.fmt" 1495593487 4129592 0e6cfee100d68e6d96b92c0258f2ff73 ""
   "/usr/local/texlive/2017/texmf.cnf" 1495593465 577 2b71d4d888f9e5560b2e99985915a9fa ""
-  "lin-alg.aux" 1519621374 1020 a2d7d5d03c4c3a48c3658b1300650077 ""
-  "lin-alg.tex" 1519621372 10574 4416fa74fd41f6088c67efd93f630d11 ""
-  "lin-alg.toc" 1519621374 718 78a521f0ef4eef398c981e165a8d263d ""
+  "lin-alg.aux" 1519626012 1125 1b16ca9870ae2734f7474b1ab4af9beb ""
+  "lin-alg.tex" 1519626010 13488 8ab40a92c9d89cab973a746d201939a5 ""
+  "lin-alg.toc" 1519626012 805 d3e58f7ccef3bfdbda70cd267cc9e558 ""
   (generated)
-  "lin-alg.toc"
   "lin-alg.pdf"
   "lin-alg.aux"
   "lin-alg.log"
+  "lin-alg.toc"

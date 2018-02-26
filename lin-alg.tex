@@ -313,7 +313,83 @@
 \end{definition}
 
 \begin{theorem}
-  The solution set of a consistent non-homogeneous linear system $A\vec{x} = \vec{b}$ is obtained by translating the solution set of its corresponding homogeneous linear system $A\vec{x} = \vec{0}$ by any particular solution $\vec{p}$ of $A\vec{x} = \vec{b}$. 
+  The solution set of a consistent non-homogeneous linear system $A\vec{x} = \vec{b}$ is obtained by translating the solution set of its corresponding homogeneous linear system $A\vec{x} = \vec{0}$ by any particular solution $\vec{p}$ of $A\vec{x} = \vec{b}$.
 \end{theorem}
+
+\begin{definition}
+  An indexed set of vectors $\{\vec{v}_1, \cdots, \vec{v}_p \} \in \mathbb{R}^n$ is \textit{linearly independent} if the vector equation
+  $$x_1\vec{v}_1 + \cdots + x_p\vec{v}_p = \vec{0}$$
+  has only the trivial solution.
+\end{definition}
+
+\begin{definition}
+  An indexed set of vectors $\{\vec{v}_1, \cdots, \vec{v}_p \} \in \mathbb{R}^n$ is \textit{linearly dependent} if $\exists$ weights $c_1, \cdots, c_p$, not all zero, such that
+  $$c_1 \vec{v}_1 + \cdots + c_p \vec{v}_p = \vec{0}$$
+\end{definition}
+
+\begin{remark}
+  The columns of $A$ are linearly independent iff the equation $A\vec{x} = \vec{0}$ has only the trivial solution.
+\end{remark}
+
+\begin{remark}
+  An indexed set of vectors is linearly dependent iff at least one of the vectors in the set is a linear combination of the others.
+\end{remark}
+
+\begin{remark}
+  A set containing a single vector is linearly independent iff its not the zero vector. It follows: the zero vector is linearly dependent.
+\end{remark}
+
+\begin{theorem}
+  Any set $\{\vec{v}_1, \cdots, \vec{v}_p \} \in \mathbb{R}^n$ is linearly dependent if $p > n$
+\end{theorem}
+
+\begin{theorem}
+  Any set $\{\vec{v}_1, \cdots, \vec{v}_p \} \in \mathbb{R}^n$ that contains the zero vector is linearly dependent.
+\end{theorem}
+
+\subsection{Introduction to Linear Transformations}
+
+\begin{definition}
+  A \textit{transformation} $T$ from $\mathbb{R}^n$ to $\mathbb{R}^m$, written $T: \mathbb{R}^n \to \mathbb{R}^m$, is a rule that assigns to each vector $\vec{x} \in \mathbb{R}^n$ a vector $T(\vec{x}) \in \mathbb{R}^m$.
+  \begin{itemize}
+    \item $\mathbb{R}^n$ is the \textit{domain} of $T$ and $\mathbb{R}^m$ is its \textit{codomain}.
+    \item $\forall\ \vec{x} \in \mathbb{R}^n$ the vector $T(\vec{x}) \in \mathbb{R}^m$ is the \textit{image} of x.
+    \item The set of all  images $T(\vec{x})$ is the \textit{range} of $T$.
+  \end{itemize}
+\end{definition}
+
+\begin{remark}
+  The codomain is all the places the transformation could take you, the range is all the places it does.
+\end{remark}
+
+\begin{remark}
+  $\forall\ \vec{x} \in \mathbb{R}^n$, $T(\vec{x})$ is computed as $A\vec{x}$ and written  as $\vec{x} \mapsto A\vec{x}$.
+\end{remark}
+
+\begin{remark}
+  The range of $T$ is the set of all linear combinations of the columns of $A$.
+\end{remark}
+
+\begin{definition}
+  A transformation $T$ is \textit{linear} if:
+  \begin{itemize}
+    \item $T(\vec{u} + \vec{v}) = T(\vec{u}) + T(\vec{v}) \qquad \forall\ \vec{u}, \vec{v}$ in the domain of $T$.
+    \item $T(c\vec{u}) = c \, T(\vec{u}) \qquad \forall\ c, \vec{u}$ in the domain of $T$.
+  \end{itemize}
+\end{definition}
+
+\begin{remark}
+  Every matrix transformation is a linear transformation.
+\end{remark}
+
+\begin{remark}
+  Linear Transformations preserve the operations of vector addition and scalar multiplication.
+\end{remark}
+
+\begin{it follows}
+  From linearity.
+  $$T(\vec{0}) = 0$$
+\end{it follows}
+
 
 \end{document}
