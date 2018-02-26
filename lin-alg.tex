@@ -151,7 +151,7 @@
 \end{definition}
 
 \begin{remark}
-  Variables corresponding to free columns are \textit{free variables}. Variables corresponding to pivot columns are \textit{basic variables}.
+  Variables corresponding to free columns are \textit{free variables}. Variables corresponding to pivot columns of the coefficient matrix are \textit{basic variables}.
 \end{remark}
 
 \begin{remark}
@@ -166,9 +166,10 @@
   A linear system is consistent iff the right-most column of the augmented matrix is \textbf{not} a pivot column.
 \end{remark}
 
-\begin{remark}
+\begin{theorem}[Existence and uniqueness theorem]
+  A linear system is consistent iff the right-most column of the augmented matrix is \textbf{not} a pivot column. \\
   A consistent linear system has either a unique solution, if it has no free variables, or infinitely many solutions if it has at least one free variable.
-\end{remark}
+\end{theorem}
 
 \subsection{Vector Equations}
 
@@ -280,5 +281,39 @@
   \end{itemize}
 \end{theorem}
 
+\subsection{Solution Sets of Linear Systems}
+
+\begin{definition}
+  A system of linear equations is \textit{homogeneous} if it can be written in the form
+  $$A \vec{x} = \vec{0}$$
+  where $A^{m \times n}$ and $\vec{0} \in \mathbb{R}^m$
+\end{definition}
+
+\begin{remark}
+  All homogeneous linear systems, $A\vec{x} = \vec{0}$, have a trivial solution.
+\end{remark}
+
+\begin{it follows}
+  From the existence and uniqueness theorem. \\
+  A homogeneous linear system has a non-trivial solution iff it has at least one free variable.
+\end{it follows}
+
+\begin{definition}
+  The parametric vector form of the solution set of the homogeneous linear system $A\vec{x} = \vec{0}$ with one free variable is
+  $$ \vec{x} = t\vec{v} \qquad \text{where}\ t \in \mathbb{R}$$
+\end{definition}
+
+\begin{remark}
+  The solution set of a homogeneous linear system, $A\vec{x} = \vec{0}$, with only one free variable is a line through the origin.
+\end{remark}
+
+\begin{definition}
+  The parametric vector form of the solution set of the non-homogeneous linear system $A\vec{x} = \vec{b}$ is
+  $$ \vec{x} = \vec{p} + t\vec{v} \qquad \text{where}\ t \in \mathbb{R}$$
+\end{definition}
+
+\begin{theorem}
+  The solution set of a consistent non-homogeneous linear system $A\vec{x} = \vec{b}$ is obtained by translating the solution set of its corresponding homogeneous linear system $A\vec{x} = \vec{0}$ by any particular solution $\vec{p}$ of $A\vec{x} = \vec{b}$. 
+\end{theorem}
 
 \end{document}
