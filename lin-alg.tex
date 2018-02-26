@@ -176,7 +176,7 @@
   \mathbb{R}^n &:=\ \text{Set of ordered n-tuples}\
   \begin{bmatrix}
     x_1 \\
-    \dots  \\
+    \vdots  \\
     x_n
   \end{bmatrix}\
   \text{where}\ x_1, \dots, x_n \in \mathbb{R} \\
@@ -184,8 +184,6 @@
   \mathbb{R}^2 &:=\ \text{Plane} \\
   \mathbb{R}^3 &:=\ \text{Space}
 \end{align*}
-
-
 
 \begin{definition}
   A \textit{vector} in $\mathbb{R}^n$ is an element of $\mathbb{R}^n$.
@@ -213,7 +211,7 @@
 \end{itemize}
 
 \begin{definition}
-  Let $\vec{v}_1, \cdots, \vec{v}_p \in \mathbb{R}^n\ \text{and}\ c_1, \cdots, c_p \in \mathbb{R}$, then
+  If $\vec{v}_1, \cdots, \vec{v}_p \in \mathbb{R}^n\ \text{and}\ c_1, \cdots, c_p \in \mathbb{R}$, then
   $$\vec{y} = c_1 \vec{v}_1 + \cdots + c_p \vec{v}_p$$
   is a linear combination of $\vec{v}_1, \cdots, \vec{v}_p$.
 \end{definition}
@@ -222,8 +220,65 @@
   $\text{Span}\{\vec{v}_1, \cdots, \vec{v}_p\}$ is the set of all linear combinations of $\vec{v}_1, \cdots, \vec{v}_p$.
 \end{definition}
 
+\subsection{The Matrix Equation $Ax = b$}
 
+\begin{definition}
+  If $A^{m \times n}$ and $\vec{x} \in \mathbb{R}^n$ then $A\vec{x}=\vec{b}$ is the linear combination of the columns of $A$ using the corresponding entries of x as weights
 
+  \begin{equation*}
+    A\vec{x} = \left[ \, \vec{a}_1\ \cdots\ \vec{a}_n  \, \right]
+    \begin{bmatrix}
+      x_1 \\
+      \vdots  \\
+      x_n
+    \end{bmatrix}\
+    = x_1 \vec{a}_1 + \cdots + x_n \vec{a}_n
+  \end{equation*}
+\end{definition}
+
+\begin{remark}
+  $A\vec{x}$ is defined iff the number of columns of $A$ equals the number of entries in $\vec{x}$.
+\end{remark}
+
+\begin{theorem}
+  If $A^{m \times n}$ and $\vec{b} \in \mathbb{R}^m$, then the \textit{matrix equation}
+  $$A\vec{x} =\vec{b}$$
+  has the same solution set as the \textit{vector equation}
+  $$x_1\vec{a}_1 + \cdots + x_n\vec{a}_n = b$$
+  which in turn, has the same solution set as the system of linear equations whose augmented matrix is
+  $$ \left[ \, \vec{a}_1\ \cdots\ \vec{a}_n\ \vec{b}  \, \right]$$
+\end{theorem}
+
+\begin{remark}
+  The equation $A\vec{x} = \vec{b}$ has a solution iff $\vec{b}$ is a linear combination of the columns of $A$.
+\end{remark}
+
+\begin{theorem}
+  If $A^{m \times n}$, then the following statements are logically equivalent.
+  \begin{itemize}
+    \item $A\vec{x}=\vec{b}$ has a solution $\forall \vec{b} \in \mathbb{R}^m$
+    \item Each $\vec{b} \in \mathbb{R}^m$ is a linear combination of the columns of $A$
+    \item Span $\{\vec{a}_1, \cdots, \vec{a}_n \} = \mathbb{R}^m$
+    \item $A$ has a pivot position in every row
+  \end{itemize}
+\end{theorem}
+
+\begin{remark}
+  The \textit{i}th entry of $A\vec{x}$ is the sum of the products of the entries of the \textit{i}th row of $A$ with the corresponding entries of $\vec{x}$
+\end{remark}
+
+\begin{definition}
+  The \textit{identity matrix}, denoted $I_{n}$, is an $n \times n$ matrix with 1's on the diagonal and 0's elsewhere.
+  $$I_{n} \, \vec{x} = \vec{x}\ \forall \vec{x} \in \mathbb{R}^n$$
+\end{definition}
+
+\begin{theorem}
+  If $A^{m \times n}$, $\vec{u}\ \text{and}\ \vec{v} \in \mathbb{R}^n$ and c \in \mathbb{R}, then
+  \begin{itemize}
+    \item $A(\vec{u} + \vec{v}) = A\vec{u} + A\vec{v}$
+    \item $A(c\vec{u}) = c(A\vec{u})$
+  \end{itemize}
+\end{theorem}
 
 
 \end{document}
